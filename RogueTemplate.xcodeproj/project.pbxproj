@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA603C6D246F852B001C1C5D /* Rogue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA603C6C246F852B001C1C5D /* Rogue.framework */; };
+		FA8732E4246C693D00C3CFE5 /* ExampleTweak.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8732E3246C693D00C3CFE5 /* ExampleTweak.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA603C6C246F852B001C1C5D /* Rogue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rogue.framework; path = Rogue/build/Rogue.framework; sourceTree = "<group>"; };
+		FA76FA12246F5E2700DE9B45 /* Filter.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Filter.plist; sourceTree = "<group>"; };
+		FA8732DF246C693D00C3CFE5 /* Template.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = Template.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8732E2246C693D00C3CFE5 /* ExampleTweak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleTweak.h; sourceTree = "<group>"; };
+		FA8732E3246C693D00C3CFE5 /* ExampleTweak.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTweak.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA8732DC246C693D00C3CFE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA603C6D246F852B001C1C5D /* Rogue.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA46B4DC246F80BA00BFC9B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA603C6C246F852B001C1C5D /* Rogue.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA76FA11246F5E1100DE9B45 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA76FA12246F5E2700DE9B45 /* Filter.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA8732D6246C693D00C3CFE5 = {
+			isa = PBXGroup;
+			children = (
+				FA76FA11246F5E1100DE9B45 /* Resources */,
+				FA8732E1246C693D00C3CFE5 /* Template */,
+				FA8732E0246C693D00C3CFE5 /* Products */,
+				FA46B4DC246F80BA00BFC9B6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA8732E0246C693D00C3CFE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA8732DF246C693D00C3CFE5 /* Template.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA8732E1246C693D00C3CFE5 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				FA8732E2246C693D00C3CFE5 /* ExampleTweak.h */,
+				FA8732E3246C693D00C3CFE5 /* ExampleTweak.m */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA8732DE246C693D00C3CFE5 /* Template */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA8732E8246C693D00C3CFE5 /* Build configuration list for PBXNativeTarget "Template" */;
+			buildPhases = (
+				FA06C7DB246F6ED6003EB4D9 /* Get Rogue */,
+				FA8732DB246C693D00C3CFE5 /* Sources */,
+				FA8732DC246C693D00C3CFE5 /* Frameworks */,
+				FAA1A0DF246C69FE00852903 /* Inject Into Simulator */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Template;
+			productName = Template;
+			productReference = FA8732DF246C693D00C3CFE5 /* Template.dylib */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA8732D7246C693D00C3CFE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Rogue;
+				TargetAttributes = {
+					FA8732DE246C693D00C3CFE5 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = FA8732DA246C693D00C3CFE5 /* Build configuration list for PBXProject "RogueTemplate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA8732D6246C693D00C3CFE5;
+			packageReferences = (
+			);
+			productRefGroup = FA8732E0246C693D00C3CFE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA8732DE246C693D00C3CFE5 /* Template */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FA06C7DB246F6ED6003EB4D9 /* Get Rogue */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Get Rogue";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ ! -e \"$PWD/Rogue\" ]]; then\n    echo \"warning: Cloning Rogue\"\n    git clone https://github.com/JohnCoates/Rogue\n    echo \"warning: Building Rogue framework\"\n    \"$PWD/Rogue/Scripts/buildLibrary.sh\"\nfi\n";
+		};
+		FAA1A0DF246C69FE00852903 /* Inject Into Simulator */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Inject Into Simulator";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$PLATFORM_NAME\" -ne \"iphonesimulator\" ]]; then\n    exit 0\nfi\n\nif [[ \"$ROGUE_SIMULATOR_INJECT\" -ne \"YES\" ]]; then\n    echo \"warning: Not injecting into simulator.\"\n    exit 0\nfi\n\nunset SDKROOT\npushd ./Rogue\n    echo \"Fetching rogue-tool dependencies as necessary\"\n    rogueBin=`swift build --product rogue-tool --configuration release --show-bin-path`\n    rogueToolPath=\"$rogueBin/rogue-tool\"\n    if [[ ! -e \"$rogueToolPath\" ]]; then\n        echo \"warning: Building rogue-tool\"\n        swift build --product rogue-tool --configuration release\n    fi\n\n    if [[ ! -e \"$rogueToolPath\" ]]; then\n        echo \"Error: Missing rogue-tool, can't inject into simulator.\"\n        exit 1\n    fi\npopd\n\nrevealArgument=\"\"\nif [[ \"$ROGUE_SIMULATOR_INJECT_REVEAL\" -eq \"YES\" ]]; then\n    RevealServer=\"$HOME/Library/Application Support/Reveal/RevealServer/iOS/RevealServer.framework/RevealServer\"\n    if [[ -e \"$RevealServer\" ]]; then\n        revealArgument=\"--library \\\"$RevealServer\\\"\"\n    fi\nfi\n\necho \"warning: Injecting into simulator\"\neval \"$rogueToolPath\" simulator-inject --filter-file \"$PROJECT_DIR/Resources/Filter.plist\" --library \"$CODESIGNING_FOLDER_PATH\" $revealArgument\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA8732DB246C693D00C3CFE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA8732E4246C693D00C3CFE5 /* ExampleTweak.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA8732E6246C693D00C3CFE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FA8732E7246C693D00C3CFE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA8732E9246C693D00C3CFE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E6QK4MU6LM;
+				EXECUTABLE_EXTENSION = dylib;
+				EXECUTABLE_PREFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Rogue/build",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Rogue/build",
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				ROGUE_SIMULATOR_INJECT = YES;
+				ROGUE_SIMULATOR_INJECT_REVEAL = YES;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA8732EA246C693D00C3CFE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E6QK4MU6LM;
+				EXECUTABLE_EXTENSION = dylib;
+				EXECUTABLE_PREFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Rogue/build",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Rogue/build",
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				ROGUE_SIMULATOR_INJECT = YES;
+				ROGUE_SIMULATOR_INJECT_REVEAL = YES;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA8732DA246C693D00C3CFE5 /* Build configuration list for PBXProject "RogueTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA8732E6246C693D00C3CFE5 /* Debug */,
+				FA8732E7246C693D00C3CFE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA8732E8246C693D00C3CFE5 /* Build configuration list for PBXNativeTarget "Template" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA8732E9246C693D00C3CFE5 /* Debug */,
+				FA8732EA246C693D00C3CFE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA8732D7246C693D00C3CFE5 /* Project object */;
+}
