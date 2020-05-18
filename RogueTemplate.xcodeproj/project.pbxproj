@@ -3,20 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA603C6D246F852B001C1C5D /* Rogue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA603C6C246F852B001C1C5D /* Rogue.framework */; };
 		FA8732E4246C693D00C3CFE5 /* ExampleTweak.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8732E3246C693D00C3CFE5 /* ExampleTweak.m */; };
+		FAEA5D3624731A210059A915 /* Rogue.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEA5D3524731A200059A915 /* Rogue.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA603C6C246F852B001C1C5D /* Rogue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rogue.framework; path = Rogue/build/Rogue.framework; sourceTree = "<group>"; };
 		FA76FA12246F5E2700DE9B45 /* Filter.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Filter.plist; sourceTree = "<group>"; };
 		FA8732DF246C693D00C3CFE5 /* Template.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = Template.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8732E2246C693D00C3CFE5 /* ExampleTweak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleTweak.h; sourceTree = "<group>"; };
 		FA8732E3246C693D00C3CFE5 /* ExampleTweak.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTweak.m; sourceTree = "<group>"; };
+		FAEA5D3524731A200059A915 /* Rogue.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Rogue.xcframework; path = Rogue/build/Rogue.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,7 +24,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA603C6D246F852B001C1C5D /* Rogue.framework in Frameworks */,
+				FAEA5D3624731A210059A915 /* Rogue.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,7 +34,7 @@
 		FA46B4DC246F80BA00BFC9B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA603C6C246F852B001C1C5D /* Rogue.framework */,
+				FAEA5D3524731A200059A915 /* Rogue.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
