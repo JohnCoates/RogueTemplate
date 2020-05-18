@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		FA8732E4246C693D00C3CFE5 /* ExampleTweak.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8732E3246C693D00C3CFE5 /* ExampleTweak.m */; };
-		FAEA5D3624731A210059A915 /* Rogue.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEA5D3524731A200059A915 /* Rogue.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,7 +15,6 @@
 		FA8732DF246C693D00C3CFE5 /* Template.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = Template.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8732E2246C693D00C3CFE5 /* ExampleTweak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleTweak.h; sourceTree = "<group>"; };
 		FA8732E3246C693D00C3CFE5 /* ExampleTweak.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTweak.m; sourceTree = "<group>"; };
-		FAEA5D3524731A200059A915 /* Rogue.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Rogue.xcframework; path = Rogue/build/Rogue.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,7 +22,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAEA5D3624731A210059A915 /* Rogue.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,7 +31,6 @@
 		FA46B4DC246F80BA00BFC9B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FAEA5D3524731A200059A915 /* Rogue.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,7 +77,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA8732E8246C693D00C3CFE5 /* Build configuration list for PBXNativeTarget "Template" */;
 			buildPhases = (
-				FA06C7DB246F6ED6003EB4D9 /* Get Rogue */,
+				FA9D43372473244C00F69D0D /* Get Rogue */,
+				FA9D43382473246100F69D0D /* Build Framework */,
 				FA8732DB246C693D00C3CFE5 /* Sources */,
 				FA8732DC246C693D00C3CFE5 /* Frameworks */,
 				FAA1A0DF246C69FE00852903 /* Inject Into Simulator */,
@@ -130,7 +127,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FA06C7DB246F6ED6003EB4D9 /* Get Rogue */ = {
+		FA9D43372473244C00F69D0D /* Get Rogue */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -146,7 +143,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ ! -e \"$PWD/Rogue\" ]]; then\n    echo \"warning: Cloning Rogue\"\n    git clone https://github.com/JohnCoates/Rogue\n    echo \"warning: Building Rogue framework\"\n    \"$PWD/Rogue/Scripts/buildLibrary.sh\"\nfi\n";
+			shellScript = "set -x\nset -e\nif [[ ! -e \"$PWD/Rogue\" ]]; then\n    echo \"warning: Cloning Rogue\"\n    git clone https://github.com/JohnCoates/Rogue\nfi\n";
+		};
+		FA9D43382473246100F69D0D /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -x\nset -e\nif [[ ! -e \"$PWD/Rogue/build/Rogue.framework\" ]]; then\n    pushd \"$PWD/Rogue\"\n        git reset --hard\n        git pull\n    popd\n    echo \"warning: Building Rogue framework\"\n    \"$PWD/Rogue/Scripts/buildLibrary.sh\"\nfi\n";
 		};
 		FAA1A0DF246C69FE00852903 /* Inject Into Simulator */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -306,7 +321,12 @@
 					"$(PROJECT_DIR)/Rogue/build",
 				);
 				MACH_O_TYPE = mh_dylib;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-framework",
+					Rogue,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				ROGUE_SIMULATOR_INJECT = YES;
 				ROGUE_SIMULATOR_INJECT_REVEAL = YES;
@@ -331,7 +351,12 @@
 					"$(PROJECT_DIR)/Rogue/build",
 				);
 				MACH_O_TYPE = mh_dylib;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-framework",
+					Rogue,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				ROGUE_SIMULATOR_INJECT = YES;
 				ROGUE_SIMULATOR_INJECT_REVEAL = YES;
