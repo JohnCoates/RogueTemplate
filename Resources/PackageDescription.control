@@ -1,0 +1,9 @@
+Package: com.yourName.tweakName
+Name: Tweak Name
+Author: Your Name
+Maintainer: Your Name
+Description: Description of your Rogue Tweak.
+Version: 1.0
+Depends: mobilesubstrate
+Section: Tweaks
+Architecture: iphoneos-arm
